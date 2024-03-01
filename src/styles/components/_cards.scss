@@ -1,0 +1,159 @@
+/* Estilos generales */
+.layout1,
+.layout2 {
+  width: auto;
+}
+
+/* Estilos específicos para layout1 */
+.layout1 {
+
+  .layoutUno__img,
+  .layoutUno__lead,
+  .layoutUno__title,
+  .layoutUno__subtitle,
+  .layoutUno__author {
+    width: 100%;
+  }
+
+/*   .layoutUno__container-text {
+    padding: 8px 16px 8px 16px;
+  } */
+
+  .layoutUno__lead {
+    color: #0250C9;
+    line-height: 28px;
+  }
+
+  .layoutUno__title,
+  .layoutUno__subtitle,
+  .layoutUno__author {
+    color: #272727;
+    line-height: 24px;
+  }
+
+  .layoutUno__author {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+/* Estilos específicos para layout2 */
+.layout2 {
+
+  .layoutDos__img,
+  .layoutDos__lead,
+  .layoutDos__title,
+  .layoutDos__author {
+    width: 100%;
+  }
+
+/*   .layoutDos__container-title {
+    padding: 8px 16px 8px 16px;
+  } */
+
+  .layoutDos__lead {
+    color: #0250C9;
+  }
+
+  .layoutDos__title,
+  .layoutDos__author {
+    color: #272727;
+    line-height: 24px;
+  }
+
+  .layoutDos__author {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .layout1 {
+    width: 469px;
+
+    .layoutUno__container-text {
+/*       padding: 0 0 0 8px; */
+      display: flex;
+      flex-direction: column;
+/*       gap: 8px; */
+    }
+
+    .layoutUno__lead {
+      color: #0250C9;
+      line-height: 40px;
+      font-size: 32px;
+    }
+
+    .layoutUno__subtitle {
+      line-height: 24px;
+      font-size: 16px;
+    }
+
+    .layoutUno__title,
+    .layoutUno__subtitle,
+    .layoutUno__author {
+      color: #272727;
+      line-height: 24px;
+    }
+
+    .layoutUno__author {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+/*     .layoutUno__img{
+      padding: 0 0 0 8px;
+    } */
+
+  }
+
+  .layout2 {
+    width: 235px;
+
+    .layoutDos__container-title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+/*       .layoutDos__container-title {
+        padding: 0;
+      } */
+    }
+
+    .layoutDos__lead {
+      color: #0250C9;
+      line-height: 26px;
+      font-size: 18px;
+    }
+
+    .layoutDos__author {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 700;
+    }
+
+/*     .layoutDos__img{
+      padding: 0 8px 0 0;
+    }
+ */
+  }
+}
+
+@media (min-width: 1366px) {
+  .layout1 {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+
+    .layoutUno__container-title {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+  }
+
+  .layout2 {
+    width: 280px;
+  }
+}

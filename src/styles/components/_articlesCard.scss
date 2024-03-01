@@ -1,0 +1,65 @@
+
+.layout {
+  .container__image {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container__text {
+    display: grid;
+    gap: 1.5rem;
+    color: white;
+    z-index: 10;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), #00000000;
+    padding: 64px 16px 8px 16px;
+    width: 100%;
+
+    @media (min-width: 1366px) {
+      padding: 64px 53px 8px 53px;
+    }
+  }
+
+  .text__card {
+    /*     line-height: 2rem; */
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 56px;
+    }
+
+    @media (min-width: 1366px) {
+      font-size: 48px;
+    }
+  }
+}
+
+/* <div>
+      <div className={`relative h-screen flex items-end bg-cover bg-center`} style={{ backgroundImage: `url(${image})` }}>
+        <div className="lg:px-14 w-full">
+          <button className="font-['Arial'] bg-black rounded-2xl py-1 px-3 mb-2 lg:hidden">INFOGRAFIA</button>
+          <button className="font-['Arial'] gap-2 items-center font-bold bg-white text-black rounded-2xl py-1 px-3 mb-2 hidden lg:flex">
+            <span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="20" height="20" rx="10" fill="#333333" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.52921 6.875H4V7.52995H4.81915V12.2197H4V12.875H9.15883V10.3293H8.50005V10.707C8.50005 11.3264 8.29872 11.6923 7.99122 11.9105C7.67423 12.1354 7.22243 12.2197 6.69267 12.2197H6.62691V7.52995H7.52921V6.875ZM12.1429 6.875H9.57883V7.52995H9.84607C10.094 7.52995 10.3433 7.73327 10.3433 8.04121V11.7644C10.3433 11.989 10.2833 12.0903 10.2209 12.1414C10.1526 12.1975 10.0505 12.2197 9.9155 12.2197H9.55038V12.875H11.8306V12.2197H11.5447C11.4183 12.2197 11.3168 12.2147 11.2351 12.2016C11.1532 12.1885 11.0991 12.1684 11.0622 12.1436C11.0007 12.1021 10.9531 12.0234 10.9531 11.8069V8.47382L14.3411 12.875H15.2077V7.83754C15.2077 7.77351 15.2345 7.70023 15.302 7.64103C15.3696 7.58177 15.4862 7.52995 15.6736 7.52995H16V6.875H13.7157V7.52995H14.0879C14.2812 7.52995 14.4087 7.56618 14.4848 7.62083C14.5529 7.66979 14.593 7.74283 14.593 7.86281V10.0465L12.1429 6.875Z" fill="#FDB727" />
+              </svg>
+            </span>
+            Exclusivo suscriptor
+          </button>
+//MEDIAQUERIES          <h1 className="md:text-[40px] md:leading-10 lg:text-5xl">{volanta}. <span>{title}</span></h1>
+          <p className="font-['Arial'] font-bold leading-4 text-sm mt-2">{author}</p>
+        </div>
+      </div>
+
+      <p className="hidden">{subtitle}</p>
+
+      <p className="hidden">{authorImage}</p>
+      <p className="hidden">{url}</p>
+    </div> */

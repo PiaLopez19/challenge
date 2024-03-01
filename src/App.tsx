@@ -1,33 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { articles, publicidad } from './components/dummyData'
+import NavBar from './components/navBar/NavBar'
+/* import Publicidad from './components/publicidad/Publicidad'; */
+import PublicidadComponent from "./components/publicidad/PublicidadComponent";
+import FocalIzquierdo from './components/focalIzq/FocalIzquierdo';
+import FocalPrincipal from './components/focalPrincipal/FocalPrincipal';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = (): JSX.Element => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <main>
+        <FocalPrincipal articles={articles} />
+        <section className='md:pr-[5%] md:pl-[5%]'>
+          <div className="flex gap-5">
+            <div className="w-full lg:w-3/4"> {/* Este div ocupa 3/4 del ancho */}
+              <PublicidadComponent publicidad={publicidad[0]} ubicacion="cabezal" />
+              <h1 className='main__title border-b border-neutral-300 pb-2 text-2xl text-title'>Focal Izquierdo</h1>
+              <FocalIzquierdo articles={articles} />
+            </div>
+            <div className="hidden lg:block w-1/4 h-screen"> {/* Este div ocupa 1/4 del ancho y solo se muestra en pantallas grandes */}
+              <PublicidadComponent publicidad={publicidad[1]} ubicacion="sidebar" />
+              {/* <iframe width="300" height="600" src={flyBondi} title="GeeksforGeeks"></iframe> */}
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   )
 }
