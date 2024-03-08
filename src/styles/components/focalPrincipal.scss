@@ -1,0 +1,40 @@
+
+.layout {
+  .container__image {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container__text {
+    display: grid;
+    gap:8px;
+    color: white;
+    z-index: 10;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), #00000000;
+    padding: 64px 16px 8px 16px;
+    width: 100%;
+
+    @media (min-width: 1366px) {
+      padding: 64px 53px 8px 53px;
+    }
+  }
+
+  .text__card {
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 56px;
+    }
+
+    @media (min-width: 1366px) {
+      font-size: 48px;
+    }
+  }
+}

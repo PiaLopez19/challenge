@@ -1,33 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { articles, publicidad } from './components/dummyData'
+import NavBar from './components/navBar/NavBar'
+import FocalIzquierdo from './components/focalIzq/FocalIzquierdo';
+import FocalPrincipal from './components/focalPrincipal/FocalPrincipal';
+import Opinion from './components/opinion/Opinion';
+import Anexo from './components/anexo/Anexo';
+import CardGroup from './components/cardGroup/CardGroup';
+import Footer from './components/footer/Footer';
+import PublicidadComponent from './components/publicidad/PublicidadComponent';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = (): JSX.Element => {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='flex justify-center md:hidden sticky top-0 z-50 bg-gray-100'>
+        <PublicidadComponent
+          publicidad={publicidad[2]}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <header className='w-full'>
+        <NavBar />
+      </header>
+
+      <main className='w-full'>
+        <Anexo
+          articles={articles}
+        />
+        <div className='hidden md:flex md:justify-center items-center m-4 bg-gray-100'>
+          <PublicidadComponent
+            publicidad={publicidad[0]}
+          />
+        </div>
+        <FocalPrincipal
+          articles={articles} />
+        <section className='flex md:justify-center md:gap-10 mt-8'>
+          <div>
+            <aside className='hidden md:flex bg-gray-100 md:justify-center'>
+              <PublicidadComponent
+                publicidad={publicidad[2]}
+              />
+            </aside>
+            <article className='md:w-[736px] xl:w-[920px] mt-8'>
+              <h1 className='border-b pb-4 px-4 md:px-0 main__title text-2xl text-title'>Focal Izquierdo</h1>
+              <FocalIzquierdo
+                articles={articles}
+              />
+            </article>
+            <article className='md:w-[736px] xl:w-[920px] mt-8'>
+              <h2 className='border-b pb-4 px-4 md:px-0 main__title text-title text-2xl'>Opinion</h2>
+              <Opinion
+                articles={articles}
+              />
+            </article>
+            <article className='md:w-[736px] xl:w-[920px]'>
+              <h2 className='border-b pb-4 px-4 md:px-0 main__title text-title text-2xl mt-8'>Card Group x6</h2>
+              <CardGroup
+                articles={articles}
+              />
+            </article>
+          </div>
+          <aside className='hidden lg:flex bg-gray-100'>
+            <PublicidadComponent
+              publicidad={publicidad[1]}
+            />
+          </aside>
+        </section>
+      </main>
+
+      <footer className='mt-8'>
+        <Footer />
+      </footer>
     </>
   )
 }
