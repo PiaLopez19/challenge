@@ -8,8 +8,8 @@ interface FocalPrincipalProps {
 const FocalPrincipal: React.FC<FocalPrincipalProps> = ({ articles }) => {
 
     return (
-        <div >
-            <Card article={articles[3]} layout="layout" />
+        <div>
+            <Card article={articles[0]} layout="layout" />
         </div>
     );
 }
