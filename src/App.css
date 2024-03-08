@@ -1,3 +1,11 @@
+html,
+body,
+#root,
+.app-container {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
 @font-face {
   font-family: 'suecaslab';
@@ -11,22 +19,25 @@
   font-weight: 400;
 }
 
-.layout2 .layoutDos__lead  {
-  font-family: 'suecaslab-bold';
+:root {
+  --font-suecaslab-bold: 'suecaslab-bold';
+  --font-suecaslab: 'suecaslab';
 }
 
+.layout2 .layoutDos__lead,
 .layout1 .layoutUno__lead,
-.main__title{
-  font-family: 'suecaslab-bold';
-}
-
-.layout .text__card{
-  font-family: 'suecaslab-bold';
+.main__title,
+.layout .text__card,
+.layout3 .layoutTres__lead,
+.layout4 .layoutCuatro__lead,
+.anexo .anexo__lead {
+  font-family: var(--font-suecaslab-bold);
 }
 
 @media (min-width: 768px) {
-  .layout2 .layoutDos__lead {
-    font-family: 'suecaslab';
+
+  .layout2 .layoutDos__lead,
+  .layout3 .layoutTres__lead {
+    font-family: var(--font-suecaslab);
   }
 }
-

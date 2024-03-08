@@ -10,9 +10,11 @@ export default {
         "blue": "#0250C9",
         "background": "#FEFEFE",
         "button": "#F2F2F2",
-        "negro" : "#1C1C1F",
-        "subtitle" : "#333333",
-        "title": "#272727"
+        "negro": "#1C1C1F",
+        "subtitle": "#333333",
+        "title": "#272727",
+        "anexoBg": "#1C1C1F",
+        "botonRojo": '#B40D15'
       }
     },
   },
